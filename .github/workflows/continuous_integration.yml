@@ -11,7 +11,7 @@ on:
 
 jobs:
   setup-env-job:
-    if: ${{ github.repository != 'Azure/GenAIOps-project-template' }}
+    if: ${{ github.repository != 'darkanita/GenAIOps-project-template' }}
     runs-on: ubuntu-latest
     environment: dev
     outputs:
@@ -73,7 +73,7 @@ jobs:
         AZURE_STORAGE_ACCOUNT_NAME: ${{ vars.AZURE_STORAGE_ACCOUNT_NAME }}
 
   unit-testing:
-    if: ${{ github.repository != 'Azure/GenAIOps-project-template' }}    
+    if: ${{ github.repository != 'darkanita/GenAIOps-project-template' }}    
     runs-on: ubuntu-latest
     environment: dev
     needs: [setup-env-job]        
